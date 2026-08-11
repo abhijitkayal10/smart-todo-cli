@@ -8,16 +8,17 @@ const addTasks = (task, tasks) => {
   const allTitle = tasks.map((e) => {
     return e.title;
   });
+  const cleanTask = task.trim();
   const repeat = allTitle.find((title) => {
-    return title.trim().toLowerCase() == task.trim().toLowerCase();
+    return title.trim().toLowerCase() == cleanTask.toLowerCase();
   });
   if (repeat == undefined) {
     tasks.push({
-      title: task,
+      title: cleanTask,
       complete: false,
     });
     writeJSON(tasks);
-    console.log(`The ${task} is Updated Successfully`);
+    console.log(`The ${cleanTask} is Updated Successfully`);
   } else {
     console.log("This task already exist");
   }
