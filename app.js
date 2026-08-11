@@ -45,8 +45,15 @@ if (command === "add") {
   completedTask(tasks);
 } else if (command == "edit") {
   editTask(process.argv[3],process.argv[4], tasks);
-} else if (command == "help") {
+} else if (command == "help" || command == "--help" || command == "-h") {
   helpTask();
 } else if (command == "stats") {
   statsTask(tasks);
-} else {console.log("Invalid Command"); helpTask()};
+} else if (!command) {
+
+  console.log("❌ No command provided.");
+  console.log("💡 Try: node app.js help");
+
+  return;
+}
+else {console.log("Invalid Command"); helpTask()};

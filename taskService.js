@@ -95,7 +95,7 @@ const clearTask = (tasks, option) => {
 // Pending Task
 const pendingTask = (tasks) => {
   if (tasks.length === 0) {
-    console.log("📋 No tasks found.");
+    console.log("📋 No Pending tasks found.");
     return;
   }
   const pending = tasks.filter((task) => {
@@ -112,7 +112,7 @@ const pendingTask = (tasks) => {
 // Completed Task
 const completedTask = (tasks) => {
   if (tasks.length === 0) {
-    console.log("📋 No tasks found.");
+    console.log("📋 No Completed tasks found.");
     return;
   }
   const completed = tasks.filter((task) => {
@@ -156,17 +156,25 @@ const editTask = (index, newTitle, tasks) => {
   }
 };
 const statsTask = (tasks) => {
+
   const total = tasks.length;
+  if (total == 0){
+    console.log(`📊 No tasks available.`)
+    return;
+  }
   const completed = tasks.filter((task) => {
     return task.complete == true;
   }).length;
   const pending = tasks.filter((task) => {
     return task.complete == false;
   }).length;
+  const progress = Math.round((completed/total)*100)
   console.log(`
+    \n📊 Task Statistics\n
       Total:     ${total}
       Completed: ${completed}
       Pending:   ${pending}
+      Progress:  ${progress}%
   `);
 };
 module.exports = {
