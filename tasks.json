@@ -1,30 +1,18 @@
 [
   {
-    "title": "Breakfast",
+    "title": "Learn Node.js",
     "complete": true
   },
   {
-    "title": "Tiffin",
-    "complete": false
-  },
-  {
-    "title": "Indrajit",
+    "title": "Learn Express.js",
     "complete": true
   },
   {
-    "title": "Tiku",
+    "title": "Build API",
     "complete": false
   },
   {
-    "title": "Prosenjit",
-    "complete": false
-  },
-  {
-    "title": "Dinner",
-    "complete": false
-  },
-  {
-    "title": "Reading",
+    "title": "Learn React.js",
     "complete": false
   }
 ]
