@@ -5,10 +5,6 @@ const tasks = readJSON();
 
 const command = process.argv[2];
 
-// const task = process.argv[3];
-// const index = Number(process.argv[3]);
-// const newTitle = process.argv[4];
-// const option = process.argv[3];
 
 const helpTask = () => {
  
@@ -28,7 +24,11 @@ Commands:
   help                    Show this help
   `);
 };
-
+if (!command) {
+  console.log("❌ No command provided.");
+  console.log("💡 Try: node app.js help");
+  return;
+}
 if (command === "add") {
   addTasks(process.argv[3], tasks);
 } else if (command == "list") {
@@ -45,14 +45,8 @@ if (command === "add") {
   completedTask(tasks);
 } else if (command == "edit") {
   editTask(process.argv[3],process.argv[4], tasks);
-} else if (command == "help" || command == "--help" || command == "-h") {
-  helpTask();
 } else if (command == "stats") {
   statsTask(tasks);
-} else if (!command) {
-
-  console.log("❌ No command provided.");
-  console.log("💡 Try: node app.js help");
-
-  return;
+} else if (command == "help" || command == "--help" || command == "-h") {
+  helpTask();
 } else {console.log("Invalid Command"); helpTask()};

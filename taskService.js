@@ -73,6 +73,10 @@ const doneTask = (tasks, index) => {
     console.log("❌ Task not found.");
     return;
   }
+  if(tasks[index-1].complete==true){
+    console.log(`✅ "${tasks[index - 1].title}" Already completed`)
+    return;
+  }
   tasks[index - 1].complete = true;
   writeJSON(tasks);
   console.log(`✅ "${tasks[index - 1].title}" completed successfully!`);
@@ -126,18 +130,24 @@ const completedTask = (tasks) => {
   console.log(`\nCompleted: ${completed.length}`);
 };
 const editTask = (index, newTitle, tasks) => {
-  if (Number.isNaN(index)) {
+  if (index==undefined) {
     console.log("❌ Please Provide a task Number");
+    return;
   }
   if (index < 1 || index > tasks.length) {
     console.log("❌ Task not found.");
     return;
   }
-  const cleanTask = newTitle.trim();
-  if (!newTitle || cleanTask === "") {
+  
+  if (!newTitle || newTitle.trim() === "") {
     console.log("❌ Please provide a new task title.");
     return;
   }
+  const cleanTask = newTitle.trim();
+  if(cleanTask.toLowerCase() === tasks[index - 1].title.trim().toLowerCase()){
+    console.log("This task is already the same")
+    return;
+  };
   const allTitle = tasks.map((e) => {
     return e.title;
   });

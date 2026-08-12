@@ -1,22 +1,6 @@
 [
   {
-    "title": "Learn JavaScript",
-    "complete": false
-  },
-  {
-    "title": "Learn Node.js",
-    "complete": false
-  },
-  {
-    "title": "Learn Express.js",
-    "complete": false
-  },
-  {
-    "title": "Build REST API",
-    "complete": false
-  },
-  {
-    "title": "Learn Python",
+    "title": "Learn Javascript",
     "complete": false
   }
 ]
