@@ -55,5 +55,4 @@ if (command === "add") {
   console.log("💡 Try: node app.js help");
 
   return;
-}
-else {console.log("Invalid Command"); helpTask()};
+} else {console.log("Invalid Command"); helpTask()};
