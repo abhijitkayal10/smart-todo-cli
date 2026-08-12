@@ -2,5 +2,13 @@
   {
     "title": "Learn Javascript",
     "complete": false
+  },
+  {
+    "title": "Learn Node.js",
+    "complete": false
+  },
+  {
+    "title": "Learn Express.js",
+    "complete": false
   }
 ]
