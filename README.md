@@ -24,7 +24,7 @@ This is my first Node.js project. The project helped me practice JavaScript fund
 - 🛡️ Basic error handling
 
 ---
-
+___
 ## 🛠️ Technologies Used
 
 - JavaScript
