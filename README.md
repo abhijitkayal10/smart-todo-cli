@@ -5,7 +5,6 @@ A simple command-line TODO application built with **Node.js**.
 This is my first Node.js project. The project helped me practice JavaScript fundamentals, Node.js file handling, JSON, CLI arguments, functions, arrays, objects, and basic error handling.
 
 ---
-
 ## 🚀 Features
 
 - ➕ Add tasks
