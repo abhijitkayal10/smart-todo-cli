@@ -7,20 +7,20 @@ This is my first Node.js project. The project helped me practice JavaScript fund
 ---
 ## 🚀 Features
 
-- ➕ Add tasks
-- 📋 List all tasks
-- ✏️ Edit tasks
-- ✅ Complete tasks
-- 🗑️ Delete tasks
-- 📌 Show pending tasks
-- 🎉 Show completed tasks
-- 📊 Show task statistics
-- 🧹 Clear all tasks
-- ❓ Help command
-- 💾 Persistent data using JSON
-- 🔍 Duplicate task detection
-- ⚠️ Input validation
-- 🛡️ Basic error handling
+-  Add tasks
+-  List all tasks
+-  Edit tasks
+-  Complete tasks
+-  Delete tasks
+-  Show pending tasks
+-  Show completed tasks
+-  Show task statistics
+-  Clear all tasks
+-  Help command
+-  Persistent data using JSON
+-  Duplicate task detection
+-  Input validation
+-  Basic error handling
 
 ---
 ___
